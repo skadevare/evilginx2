@@ -180,7 +180,7 @@ func NewHttpProxy(hostname string, port int, cfg *Config, crt_db *CertDb, db *da
 					pl_name = pl.Name
 				}
 
-				egg2 := req.Host
+				
 				ps.PhishDomain = phishDomain
 				req_ok := false
 				// handle session
